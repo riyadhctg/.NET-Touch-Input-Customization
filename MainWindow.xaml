@@ -1,0 +1,56 @@
+﻿<Window x:Class="ZytronicTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        Width="1167"
+        Height="600"
+        IsManipulationEnabled="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        WindowState="Maximized"
+        
+    ManipulationDelta="Window_ManipulationDelta" ManipulationStarted="Window_ManipulationStarted" ManipulationCompleted="Window_ManipulationCompleted">
+    <Grid HorizontalAlignment="Center" Width="995">
+        <Button Content="3 Regions" Height="21" HorizontalAlignment="Left" Margin="73,22,0,0" Name="button1" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="threeRegion" />
+        <Button Content="2 Regions" Height="21" HorizontalAlignment="Left"  Margin="73,0,0,0" Name="button2" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="twoRegion" />
+
+        <Button Content="Left-hand" Height="21" HorizontalAlignment="Left" Margin="10,20,0,518" Name="button3" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="leftHand" />
+        <Button Content="Right-hand" Height="21" HorizontalAlignment="Left"  Margin="926,28,0,0" Name="button4" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="rightHand" />
+
+        <Button Content="Tapping" Height="21" HorizontalAlignment="Left" Name="button5" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="tappingButton" Margin="10,0,0,0" />
+        <Button Content="Swipe" Height="21" HorizontalAlignment="Left" Margin="925,6,0,0" Name="button6" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="swipeButton" />
+        <Button Content="Flex" Height="21" HorizontalAlignment="Left" Margin="861,6,0,0" Name="flexbut" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="flex" />
+        <Button Content="Rigid" Height="21" HorizontalAlignment="Left" Margin="861,26,0,0" Name="rigidbut" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="rigid" />
+        
+        <!--sequence buttons-->
+        <Button Content="Comb1" Height="21" HorizontalAlignment="Right" Margin="0,-71,-59,0" Name="button7" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="comb1" />
+        <Button Content="Comb2" Height="21" HorizontalAlignment="Right"  Margin="0,43,-163,0" Name="button8" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="comb2" />
+        <Button Content="Comb3" Height="21" HorizontalAlignment="Right" Margin="0,151,-181,0" Name="button9" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="comb3" />
+
+        <Button Content="StartB" Height="21"  HorizontalAlignment="Right" Margin="0,-27,-181,0" Name="button10" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="startB" />
+        <Button Content="StartH" Height="21" HorizontalAlignment="Right" Margin="0,20,-163,0" Name="button11" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="startH" />
+        <Button Content="StartC" Height="21" HorizontalAlignment="Right" Margin="0,70,-181,0" Name="button12" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="startC" />
+        
+        <!-- swipe 2 sets-->
+        <Button Content="Swipe2" Height="21" HorizontalAlignment="Right" Margin="0,-77,115,0" Name="button13" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="swipe2" />
+        <Button Content="Swipe1" Height="21" HorizontalAlignment="Right" Margin="0,0,-213,0" Name="button14" VerticalAlignment="Top" Width="63" Panel.ZIndex="0" Click="swipe1" />
+        <Canvas  Name ="ParentCanvas"  Margin="12,110,14,118" Width="300" Height="333"  ClipToBounds="True">
+            <Canvas Name="Canvas1" Margin="36,382,0,178" Panel.ZIndex="10"  HorizontalAlignment="Left" Width="100" Height="100" Canvas.Left="70" Canvas.Top="-300">
+            <Canvas.RenderTransform>
+                <TranslateTransform x:Name="MoveObjects" />
+            </Canvas.RenderTransform>
+        </Canvas>
+            <Canvas Name="CanvasDone" Margin="36,382,0,178"  Panel.ZIndex="20" HorizontalAlignment="Left" Width="100" Height="100" Canvas.Left="70" Canvas.Top="-300">
+            </Canvas>
+            <TextBlock Name="SignalBox" Height="23" Text="Feedback Box" Visibility="Hidden" Background="Aqua" FontWeight="Bold" FontSize="14" Canvas.Left="103" Canvas.Top="42" />
+            <Canvas Name="swipeFeedFwd" Width="110" Height="110" Canvas.Left="100" Canvas.Top="80"></Canvas>
+        </Canvas>
+        <TextBlock Name="HoldAlert" Height="21" HorizontalAlignment="Center" Margin="346,134,349,0"  Text="Hold Region Alert" VerticalAlignment="Top" Background="Yellow" FontWeight="Bold" FontSize="14" Width="300" TextAlignment="Center"/>
+    </Grid>
+    
+    
+
+
+
+</Window>
