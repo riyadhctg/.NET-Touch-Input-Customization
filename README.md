@@ -15,7 +15,7 @@ The detailed study can be found here in my thesis report: https://curve.carleton
 In case you want to say hi: http://riyadhsharif.com/
 
 Disclaimer:
-The code is not well organized. It could defnitely benefit from some modularity!
+This is a Proof of Concept. No attention was paid in following coding best practices.
 
 
 
