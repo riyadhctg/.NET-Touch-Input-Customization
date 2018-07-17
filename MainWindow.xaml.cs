@@ -20,12 +20,6 @@ using EllipseMaker;
 
 namespace ZytronicTest
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// 
-    /// </summary>
-    /// 
-    
 
     public partial class MainWindow : Window
     {
@@ -125,17 +119,7 @@ namespace ZytronicTest
 
         //touchpoint moving
         Point movingTouchPoint;
-        
-        /*
-        int swipeArrIndx0;
-        int swipeArrIndx1;
-        int swipeArrIndx2;
-        int swipeArrIndx3;
-        int swipeArrIndx4;
-        int swipeArrIndx5;
-        int swipeArrIndx6;
-        int swipeArrIndx7;
-        */
+    
 
         //swipe 5 times
         int swipeTimesCounter;
